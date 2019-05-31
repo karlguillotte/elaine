@@ -1,0 +1,69 @@
+<html lang="en-ca">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta property="og:url" content="{{ .Site.BaseURL }}" />
+    <meta property="og:title" content="{{ .Site.Title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="{{ .Site.Title }}" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>
+        {{ block "title" .}}
+        {{ .Site.Title }}
+        {{ end }}
+    </title>
+</head>
+
+<body>
+    <header>
+        <a href="/">
+            <img src="/logo.svg" alt="logo">
+        </a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/yoga">
+                        Yoga
+                    </a>
+                </li>
+                <li>
+                    <a href="/meditation">
+                        Meditation
+                    </a>
+                </li>
+                <li><a href="/ayurveda">
+                        Ayurveda
+                    </a>
+                </li>
+                <li>
+                    <a href="/classes">
+                        Classes
+                    </a>
+                </li>
+                <li>
+                    <a href="/workshops">
+                        Workshops
+                    </a>
+                </li>
+                <li>
+                    <a href="/about">
+                        About
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {{ block "main" .}}{{ end }}
+    </main>
+    <footer>
+        <span>Elaine Claivaz</span>
+        <span>&copy;{{ now.Format "2006" }} All Right Reserved</span>
+    </footer>
+</body>
+
+</html>
