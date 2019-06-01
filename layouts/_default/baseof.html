@@ -25,35 +25,14 @@
         </a>
         <nav>
             <ul>
+                {{ range .Site.Menus.main.ByWeight }}
                 <li>
-                    <a href="/yoga">
-                        Yoga
+                    <a {{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} class="active" {{ end }}
+                        href="{{ .URL }}">
+                        {{ .Name }}
                     </a>
                 </li>
-                <li>
-                    <a href="/meditation">
-                        Meditation
-                    </a>
-                </li>
-                <li><a href="/ayurveda">
-                        Ayurveda
-                    </a>
-                </li>
-                <li>
-                    <a href="/classes">
-                        Classes
-                    </a>
-                </li>
-                <li>
-                    <a href="/workshops">
-                        Workshops
-                    </a>
-                </li>
-                <li>
-                    <a href="/about">
-                        About
-                    </a>
-                </li>
+                {{ end }}
             </ul>
         </nav>
     </header>
@@ -62,7 +41,7 @@
     </main>
     <footer>
         <span>Elaine Claivaz</span>
-        <span>&copy;{{ now.Format "2006" }} All Right Reserved</span>
+        <span>&copy;{{ now.Format "2006" }} {{ .Site.Copyright }}</span>
     </footer>
 </body>
 

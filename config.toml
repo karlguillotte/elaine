@@ -1,3 +1,19 @@
 baseURL = "https://elaine.claivaz.com/"
-languageCode = "en-ca"
-title = "Élaine Claivaz"
+languageCode = "fr-ca"
+title = "Elaine Claivaz"
+defaultContentLanguage = "fr"
+copyright = "Tous droits réservés"
+sectionPagesMenu = "main"
+
+[languages]
+    [languages.fr]
+        weight = 1
+    [languages.en]
+        weight = 2
+        copyright = "All Right Reserved"
+        [languages.en.params.navigation]
+            a-propos = "About"
+
+[params]
+  [params.navigation]
+    a-propos = "About"
