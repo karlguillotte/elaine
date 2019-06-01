@@ -21,6 +21,12 @@ body > header {
   border-bottom: 2px solid white;
 }
 
+body > header > nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body > footer {
   display: flex;
   flex-direction: row;
