@@ -87,6 +87,10 @@ nav ul li a {
   font-size: 2rem;
 }
 
+.logo > img {
+  height: 65px;
+}
+
 @media screen and (max-width: 480px) {
   input#toggle:checked ~ a {
     display: none;
@@ -97,7 +101,11 @@ nav ul li a {
   html {
     font-size: 14px;
   }
-  
+
+  .logo > img {
+    height: inherit;
+  }
+
   label[for="toggle"] {
     display: none;
   }
@@ -108,6 +116,10 @@ nav ul li a {
 
   input#toggle:checked ~ a {
     display: block;
+  }
+
+  body > header > nav {
+    justify-items: center;
   }
 
   nav ul {
