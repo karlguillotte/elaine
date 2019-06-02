@@ -10,21 +10,48 @@ html {
 }
 
 body {
-  max-width: 1026px;
-  margin: 0 auto;
+  max-width: 1024px;
+  margin: 0 2em;
+}  
+
+@media screen and (min-width: 1024px) {
+  body {
+    margin: 0 auto;
+  }
 }
 
 body > header {
-  display: flex;
-  justify-content: space-between;
   padding: 3em 0;
   border-bottom: 2px solid white;
 }
 
 body > header > nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+label[for="toggle"] {
+  cursor: pointer;
+  display: flex;
   align-items: center;
+  color: grey;
+}
+
+label[for="toggle"] > i {
+  padding: 1em;
+}
+
+input#toggle {
+  display: none;
+}
+
+input#toggle:checked ~ ul {
+  display: flex;
+}
+
+input#toggle ~ ul {
+  display: none;
 }
 
 body > footer {
@@ -38,25 +65,60 @@ body > footer {
 
 nav ul {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   list-style: none;
   text-transform: uppercase;
 }
 
+nav ul li {
+  margin: 0.5em 0;
+  padding-left: 1em;
+  border-left: 2px solid transparent;
+}
+
+nav ul li.active,
+nav ul li:hover {
+  border-left-color:  white;
+}
+
 nav ul li a {
-  margin: 1em;
-  padding-bottom: 1em;
   color: grey;
   text-decoration: none;
-}
-nav ul li a.active,
-nav ul li a:hover {
-  border-bottom: 2px solid white;
+  white-space: nowrap;
 }
 
-main {
+@media screen and (max-width: 480px) {
+  input#toggle:checked ~ a {
+    display: none;
+  }
 }
 
-section {
-}
+@media screen and (min-width: 850px) {
+  label[for="toggle"] {
+    display: none;
+  }
 
+  input#toggle ~ ul {
+    display: flex;
+  }
+
+  input#toggle:checked ~ a {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+  
+  nav ul li {
+    margin: 1em;
+    padding-bottom: 1em;
+    padding-left: 0;
+    border-left: none;
+  }
+
+  nav ul li.active,
+  nav ul li:hover {
+    border-bottom: 2px solid white;
+  }
+}

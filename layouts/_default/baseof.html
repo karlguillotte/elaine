@@ -9,6 +9,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:description" content="{{ .Site.Title }}" />
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css">
     <link rel="stylesheet" href="/style.css">
     <title>
@@ -20,20 +21,25 @@
 
 <body>
     <header>
-        <a href="/">
-            <img src="/logo.svg" alt="logo">
-        </a>
         <nav>
+            <input type="checkbox" name="toggle" id="toggle">
+            <a href="/">
+                <img src="/logo.svg" alt="logo">
+            </a>
             <ul>
                 {{ range .Site.Menus.main.ByWeight }}
-                <li>
-                    <a {{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} class="active" {{ end }}
-                        href="{{ .URL }}">
+                <li {{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} class="active" {{ end }}>
+                    <a href="{{ .URL }}">
                         {{ .Name }}
                     </a>
                 </li>
                 {{ end }}
             </ul>
+            <label for="toggle">
+                <i class="material-icons">
+                    menu
+                </i>
+            </label>
         </nav>
     </header>
     <main>
