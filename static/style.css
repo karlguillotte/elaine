@@ -87,6 +87,12 @@ nav ul li a {
   white-space: nowrap;
 }
 
+.name {
+  font-family: 'Clicker Script', cursive;
+  color: red;
+  font-size: 2rem;
+}
+
 @media screen and (max-width: 480px) {
   input#toggle:checked ~ a {
     display: none;

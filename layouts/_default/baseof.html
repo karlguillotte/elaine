@@ -10,6 +10,7 @@
     <meta property="og:description" content="{{ .Site.Title }}" />
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Clicker+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css">
     <link rel="stylesheet" href="/style.css">
     <title>
@@ -46,7 +47,7 @@
         {{ block "main" .}}{{ end }}
     </main>
     <footer>
-        <span>Elaine Claivaz</span>
+        <span class="name">Elaine Claivaz</span>
         <span>&copy;{{ now.Format "2006" }} {{ .Site.Copyright }}</span>
     </footer>
 </body>
