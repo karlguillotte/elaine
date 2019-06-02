@@ -1,6 +1,6 @@
 html {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.6em;
   text-transform: none;
   font-weight: 300;
@@ -13,12 +13,6 @@ body {
   max-width: 1024px;
   margin: 0 2em;
 }  
-
-@media screen and (min-width: 1024px) {
-  body {
-    margin: 0 auto;
-  }
-}
 
 body > header {
   padding: 3em 0;
@@ -100,6 +94,10 @@ nav ul li a {
 }
 
 @media screen and (min-width: 850px) {
+  html {
+    font-size: 14px;
+  }
+  
   label[for="toggle"] {
     display: none;
   }
@@ -129,3 +127,14 @@ nav ul li a {
     border-bottom-color: white;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+  
+  body {
+    margin: 0 auto;
+  }
+}
+
