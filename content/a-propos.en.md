@@ -5,6 +5,4 @@ weight: 1000
 slug: "about"
 ---
 
-<section>
-    <h1>About</h1>
-</section>
+# About
