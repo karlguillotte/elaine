@@ -22,4 +22,4 @@ collections:
           widget: "select",
           options: ["Yoga", "Sonothérapie", "Méditation", "Ayurvéda"]
         }
-      - { label: "Body", name: "body", widget: "markdown", required: "false" }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
