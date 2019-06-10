@@ -20,10 +20,6 @@ collections:
           label: "Type",
           name: "type",
           widget: "select",
-          options: 
-            - { label: "Yoga", value: "yoga" },
-            - { label: "Sonothérapie", value: "sonotherapie" },
-            - { label: "Méditation", value: "meditation" },
-            - { label: "Ayurvéda", value: "ayurveda" }
+          options: ["Yoga", "Sonothérapie", "Méditation", "Ayurvéda"]
         }
       - { label: "Body", name: "body", widget: "markdown", required: "false" }
