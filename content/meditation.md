@@ -1,7 +1,7 @@
 ---
 title: "Méditation"
 menu: "main"
-weight: 11
+weight: 12
 ---
 
 # Méditation

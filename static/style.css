@@ -10,13 +10,16 @@ html {
 }
 
 body {
-  max-width: 1024px;
-  margin: 0 1em;
-}  
+}
 
 body > header {
   padding: 3em 0;
   border-bottom: 2px solid white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 body > header > nav {
@@ -72,7 +75,7 @@ nav ul li {
 
 nav ul li.active,
 nav ul li:hover {
-  border-left-color:  white;
+  border-left-color: white;
 }
 
 nav ul li a {
@@ -82,7 +85,7 @@ nav ul li a {
 }
 
 .name {
-  font-family: 'Clicker Script', cursive;
+  font-family: "Clicker Script", cursive;
   color: red;
   font-size: 2rem;
 }
@@ -125,7 +128,7 @@ nav ul li a {
   nav ul {
     flex-direction: row;
   }
-  
+
   nav ul li {
     margin: 1em;
     padding-bottom: 1em;
@@ -144,9 +147,51 @@ nav ul li a {
   html {
     font-size: 16px;
   }
-  
+
   body {
     margin: 0 auto;
   }
 }
 
+#baniere {
+  background: url("/arriere-plan.jpg") center 0 no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#baniere > p {
+  font-size: 1.5em;
+}
+
+#methodes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vw;
+}
+
+#methodes > a {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#methodes > a:hover {
+  background-color: lightgray;
+}
+
+@media screen and (min-width: 680px) {
+  #methodes {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: calc(100vw / 4);
+  }
+}
+
+section.padded {
+  margin: 0 1em;
+}

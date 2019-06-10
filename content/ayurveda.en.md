@@ -1,7 +1,7 @@
 ---
 title: "Ayurveda"
 menu: "main"
-weight: 12
+weight: 13
 ---
 
 # Ayurveda
