@@ -21,9 +21,9 @@ collections:
           name: "type",
           widget: "select",
           options: 
-            - { label: "Yoga", value: "yoga" }
-            - { label: "Sonothérapie", value: "sonotherapie" }
-            - { label: "Méditation", value: "meditation" }
+            - { label: "Yoga", value: "yoga" },
+            - { label: "Sonothérapie", value: "sonotherapie" },
+            - { label: "Méditation", value: "meditation" },
             - { label: "Ayurvéda", value: "ayurveda" }
         }
       - { label: "Body", name: "body", widget: "markdown", required: "false" }
